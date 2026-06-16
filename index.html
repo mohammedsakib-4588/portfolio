@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohammed Sakib | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(135deg,#0f172a,#1e293b,#111827);
+color:white;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(15px);
+z-index:1000;
+}
+
+.logo{
+font-size:1.7rem;
+font-weight:700;
+color:#38bdf8;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#38bdf8;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content h1{
+font-size:4rem;
+margin-bottom:10px;
+background:linear-gradient(90deg,#38bdf8,#818cf8,#f472b6);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero-content h2{
+font-size:1.4rem;
+font-weight:300;
+margin-bottom:20px;
+}
+
+.hero-content p{
+max-width:700px;
+margin:auto;
+line-height:1.8;
+color:#cbd5e1;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:12px 30px;
+background:linear-gradient(45deg,#38bdf8,#6366f1);
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+}
+
+/* SECTION */
+
+section{
+padding:100px 10%;
+}
+
+.section-title{
+font-size:2.8rem;
+text-align:center;
+margin-bottom:50px;
+color:#38bdf8;
+}
+
+/* ABOUT */
+
+.about{
+text-align:center;
+}
+
+.about p{
+max-width:900px;
+margin:auto;
+line-height:2;
+font-size:1.1rem;
+color:#cbd5e1;
+}
+
+/* SKILLS */
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.skill-card{
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:20px;
+backdrop-filter:blur(10px);
+transition:0.4s;
+}
+
+.skill-card:hover{
+transform:translateY(-10px);
+background:rgba(56,189,248,0.15);
+}
+
+.skill-card h3{
+margin-bottom:10px;
+color:#38bdf8;
+}
+
+/* PROJECTS */
+
+.project-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.project-card{
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:20px;
+transition:0.4s;
+}
+
+.project-card:hover{
+transform:scale(1.05);
+background:rgba(99,102,241,0.15);
+}
+
+.project-card h3{
+color:#38bdf8;
+margin-bottom:10px;
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+}
+
+.contact-box{
+background:rgba(255,255,255,0.05);
+padding:40px;
+border-radius:20px;
+max-width:700px;
+margin:auto;
+}
+
+.contact p{
+margin:15px 0;
+font-size:1.1rem;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:30px;
+background:#020617;
+color:#94a3b8;
+}
+
+/* ANIMATION */
+
+.hidden{
+opacity:0;
+transform:translateY(50px);
+transition:all 1s;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+<div class="logo">MS.</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<!-- HERO -->
+
+<section id="home" class="hero">
+<div class="hero-content">
+<h1>Mohammed Sakib</h1>
+<h2>BTech Artificial Intelligence & Data Science Student</h2>
+
+<p>
+Passionate AI & Data Science enthusiast focused on building innovative solutions using
+Python, C Programming, Data Analytics and Machine Learning concepts.
+I enjoy creating impactful projects that solve real-world problems and continuously
+exploring emerging technologies.
+</p>
+
+<a href="#projects" class="btn">View My Projects</a>
+</div>
+</section>
+
+<!-- ABOUT -->
+
+<section id="about" class="about hidden">
+
+<h2 class="section-title">About Me</h2>
+
+<p>
+I am Mohammed Sakib, a first-year BTech student specializing in Artificial Intelligence and Data Science.
+I possess strong foundations in Python, C Programming, Pandas, Data Analysis, Problem Solving,
+and Software Development. I am passionate about leveraging technology to build intelligent systems
+and contribute to innovative projects that create positive social impact.
+</p>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills" class="hidden">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="skills-grid">
+
+<div class="skill-card">
+<h3>Python Development</h3>
+<p>Object-Oriented Programming, Automation, Data Handling.</p>
+</div>
+
+<div class="skill-card">
+<h3>C Programming</h3>
+<p>Data Structures, Graphics Programming, Problem Solving.</p>
+</div>
+
+<div class="skill-card">
+<h3>Data Analytics</h3>
+<p>Pandas, NumPy, Data Visualization and Insights.</p>
+</div>
+
+<div class="skill-card">
+<h3>Machine Learning Basics</h3>
+<p>Model Building, Data Preprocessing, Prediction Systems.</p>
+</div>
+
+<div class="skill-card">
+<h3>Web Development</h3>
+<p>HTML, CSS, Responsive Design.</p>
+</div>
+
+<div class="skill-card">
+<h3>AI Problem Solving</h3>
+<p>Algorithm Design, Critical Thinking, Innovation.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects" class="hidden">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="project-grid">
+
+<div class="project-card">
+<h3>Smart Street</h3>
+<p>
+Intelligent street management system integrating smart monitoring
+and automation concepts.
+</p>
+</div>
+
+<div class="project-card">
+<h3>ClimateSense</h3>
+<p>
+Advanced humidity and environmental monitoring system providing
+real-time climate insights.
+</p>
+</div>
+
+<div class="project-card">
+<h3>Silent Scream</h3>
+<p>
+Technology-driven social impact project focused on emergency
+communication and safety.
+</p>
+</div>
+
+<div class="project-card">
+<h3>2D Graphics Editor</h3>
+<p>
+Mini project built using C Programming enabling shape creation,
+editing and graphical manipulation.
+</p>
+</div>
+
+<div class="project-card">
+<h3>Student Performance Analyzer</h3>
+<p>
+Data analytics project using Python and Pandas to evaluate
+academic trends and performance.
+</p>
+</div>
+
+<div class="project-card">
+<h3>AI Chat Assistant</h3>
+<p>
+Prototype conversational AI system using Natural Language Processing concepts.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact hidden">
+
+<h2 class="section-title">Contact Me</h2>
+
+<div class="contact-box">
+
+<p><strong>Name:</strong> Mohammed Sakib</p>
+
+<p><strong>Phone:</strong> +91 6363754082</p>
+
+<p><strong>Email:</strong> mohammedsakib4588@gmail.com</p>
+
+<p>
+Let's connect and collaborate on innovative projects,
+technology solutions and future opportunities.
+</p>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Mohammed Sakib | AI & Data Science Portfolio
+</footer>
+
+<script>
+
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+
+document.querySelectorAll('.hidden').forEach(el=>{
+observer.observe(el);
+});
+
+</script>
+
+</body>
+</html>
